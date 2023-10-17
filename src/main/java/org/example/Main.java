@@ -49,7 +49,8 @@ public class Main {
                     params.put(key, value);
                     int v = Integer.parseInt(params.get(key));
 
-                    for (WiseSaying wiseSaying : wiseSayings) {
+                    for (int i = wiseSayings.size() - 1; i >= 0; i--) {
+                        WiseSaying wiseSaying = wiseSayings.get(i);
                         if (wiseSaying.getId() == v) {
                             wiseSayings.remove(wiseSaying);
                             System.out.println(v + "번 목록이 삭제되었습니다.");
